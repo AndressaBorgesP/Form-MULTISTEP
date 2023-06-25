@@ -45,7 +45,7 @@ form {
     gap: 4rem;
     border-bottom: 1px solid var(--color-base-gray-100);
     padding-bottom: 3.2rem;
-    color: var(--color-base-gray-200);
+    counter-reset: step;
 }
 
 .step-progress strong.active {
@@ -53,8 +53,9 @@ form {
 }
 
 .step-progress strong::before {
-    content: "1";
-    font-size: 1.4rem;
+    counter-increment: step;
+    content: counter(step);
+    font-size: 2rem;
     background-color: var(--color-base-gray-100);
     width: 2.8rem;
     border-radius: 50%;
@@ -66,4 +67,28 @@ form {
     color: var(--color-base-gray-200);
 }
 
+.step-progress .active::before {
+    background-color: var(--color-produto-purple-mid);
+    color: var(--color-base-white);
+}
 
+.step-progress .done::before {
+    content: '+';
+    background-color: var(--color-feedback-sucess-color);
+}
+
+.content {
+    margin-top: 3.2rem;
+    display: grid;
+    gap: 1.6rem;
+}
+
+.button-wrapper {
+    margin-top: 3.2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.justify-end{
+    justify-content: flex-end;
+}
