@@ -10,6 +10,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
 
     <title>Formulário MultiSTEP</title>
 </head>
@@ -19,11 +20,11 @@
 
     <form>
         <div class="step-progress">
-            <strong class="active done" >Contato</strong>
+            <strong class="active" data-step>Contato</strong>
             <img src="assets/next.png" width="24" height="23" alt="next button" srcset="">       
-            <strong>Empresa</strong>
+            <strong data-step>Empresa</strong>
             <img src="assets/next.png" width="24" height="23" alt="next button" srcset="">
-            <strong>Projeto</strong>
+            <strong data-step>Projeto</strong>
         </div>
            
        
@@ -45,12 +46,12 @@
             </div>
 
             <div class="button-wrapper justify-end">
-                <button type="button" class="btn primary">CONTINUAR</button>
+                <button type="button" class="btn primary" data-action="next">CONTINUAR</button>
             </div>
 
         </div>
 
-        <div class="form-step">
+        <div class="form-step hide">
             <div class="content">
                 <div class="input-wrapper">
                     <label for="business-name">Nome da empresa:</label>
@@ -68,13 +69,13 @@
             </div>
 
             <div class="button-wrapper">
-                <button type="button" class="btn secondary">VOLTAR</button>
-                <button  type="button" class="btn primary">CONTINUAR</button>
+                <button type="button" class="btn secondary" data-action="prev">VOLTAR</button>
+                <button  type="button" class="btn primary" data-action="next">CONTINUAR</button>
             </div>
 
         </div>
 
-        <div class="form-step">
+        <div class="form-step hide">
             <div class="content">
 
                 <div class="input-wrapper">
@@ -85,7 +86,7 @@
             </div>
 
             <div class="button-wrapper">
-                <button class="btn primary">VOLTAR</button>
+                <button type="button" class="btn secondary" data-action="prev">VOLTAR</button>
                 <button class="btn primary" type="submit">ENVIAR RESPOSTA</button>
             </div>
 
