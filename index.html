@@ -15,49 +15,84 @@
 </head>
 <body>
 
+<main id="app">
 
-
-        <form>
-            <div class="step-progress">
-                <strong class="active done" >Contato</strong>
-                <img src="assets/next.png" width="24" height="23" alt="next button" srcset="">       
-                <strong>Empresa</strong>
-                <img src="assets/next.png" width="24" height="23" alt="next button" srcset="">
-                <strong>Projeto</strong>
-            </div>
-               
+    <form>
+        <div class="step-progress">
+            <strong class="active done" >Contato</strong>
+            <img src="assets/next.png" width="24" height="23" alt="next button" srcset="">       
+            <strong>Empresa</strong>
+            <img src="assets/next.png" width="24" height="23" alt="next button" srcset="">
+            <strong>Projeto</strong>
+        </div>
            
-            <div class="form-step active">
-                <div class="content">
-                    <div class="input-wrapper">
-                        <label for="name">Nome:</label>
-                        <input id="name" name="name" type="text" placeholder="Como prefere ser chamado" required/>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="phone">Telefone:</label>
-                        <input id="phone" name="phone" type="tel" placeholder="Digite seu Número" onkeypress="return /\d/.test(event.key)"/>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="name">Email</label>
-                        <input id="name" name="name" type="text" placeholder="Como seu email" required/>
-                    </div>
-
+       
+        <div class="form-step active">
+            <div class="content">
+                <div class="input-wrapper">
+                    <label for="name">Nome:</label>
+                    <input id="name" name="name" type="text" placeholder="Como prefere ser chamado" required/>
                 </div>
-
-                <div class="button-wrapper justify-end">
-                    <button class="btn primary">CONTINUAR</button>
-
+                <div class="input-wrapper">
+                    <label for="phone">Telefone:</label>
+                    <input id="phone" name="phone" type="tel" placeholder="Digite seu Número" onkeypress="return /\d/.test(event.key)"/>
                 </div>
-
+                <div class="input-wrapper">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="Como seu email" required/>
+                </div>
 
             </div>
 
-        </form>
-     
+            <div class="button-wrapper justify-end">
+                <button type="button" class="btn primary">CONTINUAR</button>
+            </div>
 
+        </div>
 
+        <div class="form-step">
+            <div class="content">
+                <div class="input-wrapper">
+                    <label for="business-name">Nome da empresa:</label>
+                    <input id="business-name" name="business-name" type="text" placeholder="Nome da empresa" required/>
+                </div>
+                <div class="input-wrapper">
+                    <label for="business-colab-number">Número dos funcionários:</label>
+                    <input id="business-colab-number" name="business-colab-number" type="tel" placeholder="Digite seu Número" onkeypress="return /\d/.test(event.key)"/>
+                </div>
+                <div class="input-wrapper">
+                    <label for="business-about">Sobre seu negócio</label>
+                    <textarea name="business-about" id="business-about" placeholder= "Fale um pouco sobre seus produtos e serviços"></textarea>
+                </div>
 
+            </div>
 
-    
+            <div class="button-wrapper">
+                <button type="button" class="btn secondary">VOLTAR</button>
+                <button  type="button" class="btn primary">CONTINUAR</button>
+            </div>
+
+        </div>
+
+        <div class="form-step">
+            <div class="content">
+
+                <div class="input-wrapper">
+                    <label for="project">Objetivos do projeto</label>
+                    <textarea name="project" id="project" placeholder= "Descreva quais objetivos desse projeto"></textarea>
+                </div>
+
+            </div>
+
+            <div class="button-wrapper">
+                <button class="btn primary">VOLTAR</button>
+                <button class="btn primary" type="submit">ENVIAR RESPOSTA</button>
+            </div>
+
+        </div>
+
+    </form>
+
+</main>
 </body>
 </html>

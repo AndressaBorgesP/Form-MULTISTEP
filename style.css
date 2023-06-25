@@ -89,6 +89,61 @@ form {
     justify-content: space-between;
 }
 
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.6rem 3.2rem;
+    border: 0;
+    border-radius: .6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    min-width: 10rem;
+}
+
+.primary {
+    background-color: var(--color-produto-purple-mid);
+    color: var(--color-base-white);
+}
+
+.primary:hover{
+    background-color: var(--color-produto-purple-light);
+}
+
+.secondary  {
+    background-color: var(--color-base-white);
+    color: var(--color-produto-purple-mid);
+    border: 1px solid var(--color-produto-purple-mid);
+}
+
 .justify-end{
     justify-content: flex-end;
 }
+
+label {
+    font-weight: 700;
+    color: var(--color-base-gray-400);
+}
+
+input, textarea {
+    width: 100%;
+    margin-top: 4px;
+    padding: 1.6rem;
+    background-color: var(--color-base-white);
+    border: 1px solid var(--color-base-gray-100);
+    border-radius: .2rem;
+}
+
+input::placeholder, textarea::placeholder {
+    color: var(--color-base-gray-200);
+}
+
+.form-step{
+    display: none;
+}
+
+.form-step.active{
+    display: block;
+}
+
+
